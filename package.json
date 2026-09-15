@@ -1,0 +1,41 @@
+{
+  "name": "agentforge-memory-gate",
+  "version": "0.1.0",
+  "description": "AgentForge C2 Memory/RAG write-path integrity scan (ASI06 heuristic gate)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "memory-gate": "dist/index.js",
+    "memory-gate-mcp": "dist/mcp.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "mcp": "tsx src/mcp.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "agentforge",
+    "asi06",
+    "memory-gate",
+    "rag"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@hono/node-server": "^1.19.0",
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "hono": "^4.9.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
